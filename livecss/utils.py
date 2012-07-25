@@ -42,7 +42,7 @@ def file_id(view):
 def is_colorizable(view):
     point = view.sel()[0].begin()
     file_scope = view.scope_name(point).split()[0]
-    if file_scope in ['source.scss', 'source.css', 'source.css.less']:
+    if file_scope in ['source.scss', 'source.css', 'source.css.less', 'source.stylus']:
         return True
 
 

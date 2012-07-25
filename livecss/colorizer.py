@@ -82,7 +82,9 @@ def get_colored_regions(view):
     hex_rgb = view.find_by_selector("constant.other.color.rgb-value.css")
     rbg_percent = view.find_by_selector("constant.other.color.rgb-percentage.css")
     less_colors = view.find_by_selector("constant.other.rgb-value.css")
-    return w3c + extra_web + hex_rgb + rbg_percent + less_colors
+    stylus_colors = view.find_by_selector("constant.other.color.rgb-value.stylus")
+    return w3c + extra_web + hex_rgb + rbg_percent + less_colors + stylus_colors
+    
 
 
 # generate new theme file
